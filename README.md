@@ -17,14 +17,12 @@
 
 ## Technologies Used
 
-- Node.js
-- MongoDB
-- Express.js
-- Typescript
+- Node.js -version 12.22.11
+- MongoDB -version 5.0.9
+- Express.js -version 4.18.1
+- Typescript -version 4.7.4
 
 ## Features
-
-List the ready features here:
 
 - Signin/Signup
 - Add tasks to lists
