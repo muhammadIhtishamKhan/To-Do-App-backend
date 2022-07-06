@@ -1,17 +1,5 @@
 import mongoose from "mongoose";
 
-// async function mongoConnection(): Promise<string | void> {
-//   try {
-//     const mongoConnection = await mongoose.connect("mongodb://localhost/To-Do");
-//     console.log(mongoConnection);
-//   } catch (err) {
-//     console.log(
-//       "The following error occured while connecting to MongoDB: ",
-//       err
-//     );
-//   }
-// }
-
 const UserSchema = new mongoose.Schema(
   {
     username: {
@@ -29,3 +17,5 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+export const User = mongoose.model("Users", UserSchema);
