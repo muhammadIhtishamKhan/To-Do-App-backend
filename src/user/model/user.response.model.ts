@@ -3,3 +3,7 @@ export interface UserResponse {
   username: string;
   email: string;
 }
+
+export interface UserExists {
+  exists: boolean;
+}
