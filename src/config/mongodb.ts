@@ -7,10 +7,10 @@ export function connectMongoDB(): void {
     const db = mongoose.connection;
     db.on(
       "error",
-      console.error.bind(console, "Unable to connect with database")
+      console.error.bind(console, "Unable to connect to database")
     );
     db.once("open", () => {
-      console.log("Successfully connect with database.");
+      console.log("Successfully connected to database.");
     });
   } catch (err) {
     console.log(
