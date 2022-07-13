@@ -2,10 +2,9 @@ import express, { Application } from "express";
 import cors from "cors";
 import morgan from "morgan";
 
-import mongoose from "mongoose";
 import { connectMongoDB } from "./config/mongodb";
 import * as userRoutes from "./user/router/user.router";
-// import "dotenv/config";
+import "dotenv/config";
 
 const app: Application = express();
 const BASE_PATH = "/todo";
