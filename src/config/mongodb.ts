@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 
 export function connectMongoDB(): void {
   try {
-    console.log(process.env.MONGO_CONNECTION);
     mongoose.connect(process.env.MONGO_CONNECTION!);
     const db = mongoose.connection;
     db.on(

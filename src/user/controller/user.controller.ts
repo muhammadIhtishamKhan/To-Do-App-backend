@@ -78,6 +78,12 @@ export async function updateUser(
   }
 }
 
+/**
+ * deletes user using the username provided
+ * @param req request
+ * @param res reponse
+ * @returns response on whether the user was deleted or not
+ */
 export async function deleteUser(
   req: express.Request,
   res: express.Response

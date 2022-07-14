@@ -5,6 +5,7 @@ import {
   UpdateUserRequest,
 } from "../model/user.request.model";
 import { UserExists } from "../model/user.response.model";
+
 /**
  * gets all users present in the users collection
  * @returns response from the Database

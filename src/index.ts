@@ -5,6 +5,7 @@ import morgan from "morgan";
 import { connectMongoDB } from "./config/mongodb";
 import * as userRoutes from "./user/router/user.router";
 import "dotenv/config";
+import * as taskRoutes from "./task/router/task.router";
 
 const app: Application = express();
 const BASE_PATH = "/todo";
@@ -42,7 +43,7 @@ app.use(
 );
 
 app.use(BASE_PATH, userRoutes.routes());
-
+app.use(BASE_PATH, taskRoutes.routes());
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });

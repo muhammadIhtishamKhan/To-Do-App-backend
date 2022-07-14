@@ -8,9 +8,8 @@ const TaskSchema = new mongoose.Schema(
       required: [true, "task description is required"],
     },
     dateAdded: { type: Date, default: Date.now },
+    username: { type: String, required: [true, "username is required"] },
   },
   { timestamps: true }
 );
-const Task = mongoose.model("tasks", TaskSchema);
-
-module.exports = Task;
+export const Task = mongoose.model("tasks", TaskSchema);
