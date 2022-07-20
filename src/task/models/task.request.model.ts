@@ -10,7 +10,7 @@ export interface UpdateTaskRequest {
   description?: string;
 }
 
-export interface TaskUpdateModel {
+export interface TaskUpdateBody {
   title: string;
   description?: string;
 }

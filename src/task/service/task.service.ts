@@ -1,7 +1,7 @@
 import { TaskResponse } from "../models/task.response.model";
 import {
   UpdateTaskRequest,
-  TaskUpdateModel,
+  TaskUpdateBody,
 } from "../models/task.request.model";
 import { Task } from "../models/task.mongoose.model";
 import { CreateTaskRequest } from "../models/task.request.model";
@@ -47,8 +47,8 @@ export async function getTasksForUser(
 
 /**
  * creates tasks for user
- * @param username
- * @param body
+ * @param username unique username for the user
+ * @param body request body
  */
 export async function createTaskForUser(
   body: CreateTaskRequest
@@ -66,8 +66,8 @@ export async function createTaskForUser(
 
 /**
  * Updates task information for the user
- * @param username
- * @param body
+ * @param username username of the user for whom the task is being updated
+ * @param body request body
  */
 export async function updateTask(
   username: string,
@@ -75,7 +75,7 @@ export async function updateTask(
 ): Promise<void> {
   try {
     const id = body._id;
-    const updateBody: TaskUpdateModel = {
+    const updateBody: TaskUpdateBody = {
       title: body.title,
       description: body.description,
     };
@@ -98,7 +98,7 @@ export async function updateTask(
 
 /**
  * Deletes a task for the user
- * @param id
+ * @param id id of the task to be deleted
  */
 export async function deleteTask(id: string): Promise<void> {
   try {
